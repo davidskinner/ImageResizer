@@ -10,7 +10,6 @@ import javax.imageio.stream.ImageInputStream
 data class ImageType(var width: Int, var name: String)
 
 class ImageThread( var image: File, var imageType: ImageType, var folder:String) : Thread() {
-
     override fun run() {
         Thumbnails.of(File(image.absolutePath))
             .size(imageType.width, imageType.width)
@@ -38,7 +37,7 @@ fun main() {
     val dir = File(folder)
 
     // get rid of stupid DS_Store
-    var files: List<File> = dir.listFiles().toMutableList().filter {  it.extension != "DS_Store" }
+    val files: List<File> = dir.listFiles().toMutableList().filter {  it.extension != "DS_Store" }
 
     for (f in files) {
         for (it in imageTypes) {
