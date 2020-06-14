@@ -32,7 +32,9 @@ fun main() {
         ImageType(1440, "thicc")
     )
 
-    val folder = "/Users/davidskinner/Desktop/resize/capspire/"
+    // Mac: /Users/davidskinner/Desktop/resize/capspire/
+    // Windows: C:\Users\David Skinner\Desktop
+    val folder = "C:\\Users\\David Skinner\\Desktop\\testImages\\"
 
     val dir = File(folder)
 
